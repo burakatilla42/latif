@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Etiler Marmaris Fikirtepe — Sipariş</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Etiler Marmaris Fikirtepe</h1>
+        <p class="tag">Bilen bilir — 25 dk’da siparişiniz kapınızda</p>
+      </div>
+      <div class="contact-header">
+        <a class="phone" href="tel:+905380223442">📞 0538 022 3442</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h2>Sıcak, Hızlı ve Lezzetli</h2>
+        <p>Merdivenköy Mahallesi, Business İstanbul — Kapınıza 25 dk.</p>
+        <a class="btn order-btn" href="#menu">Şimdi Sipariş Ver</a>
+      </div>
+    </section>
+
+    <section class="container about" id="about">
+      <h3>Hakkımızda</h3>
+      <p>Etiler Marmaris Fikirtepe — "Bilen bilir". Taze malzeme, hızlı servis ve samimi lezzetler.</p>
+    </section>
+
+    <section class="container menu" id="menu">
+      <h3>Menü</h3>
+      <div class="grid">
+        <div class="menu-item" data-name="Islak Hamburger" data-price="179">
+          <h4>Islak Hamburger</h4>
+          <p>179 TL</p>
+          <button class="add">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Patates" data-price="109">
+          <h4>Patates</h4>
+          <p>109 TL</p>
+          <button class="add">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Döner" data-price="149">
+          <h4>Döner</h4>
+          <p>149 TL</p>
+          <button class="add">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Köfte Ekmek" data-price="300">
+          <h4>Köfte Ekmek</h4>
+          <p>300 TL</p>
+          <button class="add">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Çorba" data-price="100">
+          <h4>Çorba</h4>
+          <p>100 TL</p>
+          <button class="add">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Hamburger" data-price="200">
+          <h4>Hamburger</h4>
+          <p>200 TL</p>
+          <button class="add">Sepete Ekle</button>
+        </div>
+      </div>
+      <p class="small">Fiyatlar TL cinsindendir.</p>
+    </section>
+
+    <section class="container order" id="order">
+      <h3>Sipariş Detayları</h3>
+      <div class="cart-area">
+        <ul id="cartList"></ul>
+        <p id="cartTotal"></p>
+      </div>
+
+      <form id="orderForm" onsubmit="return handleOrder(event)">
+        <label>İsim
+          <input type="text" name="name" required>
+        </label>
+        <label>Adres (Detaylı)
+          <input type="text" name="address" required>
+        </label>
+        <label>Telefon
+          <input type="tel" name="phone" value="05380223442" required>
+        </label>
+        <label>Not (isteğe bağlı)
+          <textarea name="note" rows="3"></textarea>
+        </label>
+        <button class="btn" type="submit">WhatsApp ile Gönder</button>
+      </form>
+      <p class="muted">Sipariş formu basit bir şekilde WhatsApp'a yönlendirir. Siparişiniz doğrudan 0538 022 3442 numarasına gönderilecektir.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Etiler Marmaris Fikirtepe — Merdivenköy Mahallesi, Business İstanbul</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
